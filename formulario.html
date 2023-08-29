@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCKMASTER - Viva el Rock</title>
+     <!-- Un bonito favicon-->
+     <link rel="shortcut icon" href="./img/rock_favicon.png" type="image/x-icon">
+    <!-- Mi CSS-->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Entrega Final: Implementación de Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+   <!-- Entrega Final: Usando SweetAlert para un Modal final -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="">
+            <img src="./img/logo.png" alt="Logo" >
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Inicio </a></li>
+                <li><a href="bandas_info.html"> Busca tu Banda (Fetch API ejemplo) </a></li>                  
+                <li><a href="#"> Boletos </a></li>
+                <li><a href="#"> Contacto </a></li>
+                <li><a href="#"> Ubicación </a></li>   
+    
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        
+        <div class="resultado"> 
+            <h2 id="h2"></h2>
+       </div>  
+        
+
+       <!-- <form action="index.html"> -->
+        <div class="container">
+            <div class="myinputs">            
+                <label for="nombre"> Nombre y Apellido: </label>
+                <input type="text" id="nombre" required>
+
+                <label for="telefono"> Teléfono: </label>
+                <input type="text" id="telefono" required>
+
+                <label for="email"> Email: </label>
+                <input type="email" id="email" required>
+   
+
+                <label for="comentario"> Comentario: </label>
+                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escíbenos acá ..." required></textarea>
+            </div>
+        </div>
+        
+
+        <div class="containerBol0">
+            <div class="containerBoletos">  
+                <ul class="slider">
+                <li id="slide1">                
+                </li>
+                <li id="slide2">                
+                </li>
+                <li id="slide3">                
+                </li>
+                </ul>
+                
+                <ul class="menu"> Click para ver tus boletos
+                <li>
+                    <a href="#slide1">*</a>
+                </li>
+                <li>
+                    <a href="#slide2">*</a>
+                </li>
+                <li>
+                    <a href="#slide3">*</a>
+                </li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="botonesFooter">
+            <button class="botones" type="submit" id="EnviarCompra"> Enviar </button>
+            <button class="botones" type="submit" id="EnviarIndex"> Atrás </button>               
+        </div>
+
+       <!-- </form> -->
+
+    </main>
+ 
+    <footer>
+        <h3>Todos los Derechos Reservados ©2023</h3> 
+        <div class="redesSociales">
+         <h5>Síguenos en nuestras redes</h5>
+         <!--Redes Sociales icons -->
+         <div class="social-media-icons">
+            <a href="#" title=""> <img class="iconosRedes" src="./img/facebook.png" alt="facebook"></a>
+            <a href="#" title=""> <img class="iconosRedes" src="./img/instagram.png" alt="facebook"></a>
+            <a href="#" title=""> <img class="iconosRedes" src="./img/whatsapp.png" alt="facebook"></a>
+         </div>
+        </div>
+     </footer>
+    
+     <script src="./js/step2.js"></script>
+      <!--Toastify -->
+      <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css" rel="stylesheet">
+
+      <!-- Entrega Final: Usando SweetAlert para un Modal final -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+      <!-- Implementando una API para envío de correos -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("OWSAmx4p20r89cmgU");
+        })();
+</script>
+</body>
+</html>
